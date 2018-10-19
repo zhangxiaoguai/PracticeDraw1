@@ -46,6 +46,7 @@ public class Practice9DrawPathView extends View {
         path.addArc(getWidth() / 2 - 200, getHeight() / 2 - 100, getWidth() / 2, getHeight() / 2 + 100, -225, 225);
         // arcTo中false，不抬笔一路画过去，一笔画过去，close时与第一点连线封闭
         // arcTo中true，中间抬笔重新画，close时与上次落笔处连线封闭
+        // 是否直接到画弧线的位置，true直接移动到要画弧线的位置，false画线移动到要画弧线的位置
         path.arcTo(getWidth() / 2, getHeight() / 2 - 100, getWidth() / 2 + 200, getHeight() / 2 + 100, 180, 225, false);
         path.lineTo(getWidth() / 2, getHeight() / 2 + 250);
 //        path.close();// paint是FILL模式会自动闭合当前图形，即：停笔处与上次落笔处连线闭合
